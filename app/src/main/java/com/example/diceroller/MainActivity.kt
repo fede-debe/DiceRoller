@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
             4-> R.drawable.dice_4
             5-> R.drawable.dice_5
             else-> R.drawable.dice_6
+
         }
 
         dice_image.setImageResource(resultImageDice) // we set the image related to the random number to this View
