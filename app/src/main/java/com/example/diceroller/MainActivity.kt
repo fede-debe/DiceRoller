@@ -3,10 +3,14 @@ package com.example.diceroller
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    // optimizing the code, if we use each time the extension directly could be expensive inside a bigger app. I assigned it to this var when needed.
+    lateinit var diceImage: ImageView // we will initialize this var when we need it
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +23,8 @@ class MainActivity : AppCompatActivity() {
             // Toast.makeText(this, "Let's Roll", Toast.LENGTH_LONG).show()
             rollDice() // each time the user click on it will get a result from this method
         }
+        // View assigned to the variable
+        diceImage = dice_image
     }
 
     private fun rollDice() {
@@ -31,6 +37,6 @@ class MainActivity : AppCompatActivity() {
             else-> R.drawable.dice_6
         }
 
-        dice_image.setImageResource(resultImageDice) // we set the image related to the random number to this View
+        diceImage.setImageResource(resultImageDice) // we set the image related to the random number to this View
     }
 }
