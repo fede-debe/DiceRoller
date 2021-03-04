@@ -6,7 +6,8 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
-
+// one of the job of AppCompactActivity class is to provide a toolbar that looks the same across different platform OS levels
+// Androidx refers to the libraries within the Android JetPack -> they come with the documentation and tools that you need to make great modern Android apps
 class MainActivity : AppCompatActivity() {
 
     // optimizing the code, if we use each time the extension directly could be expensive inside a bigger app. I assigned it to this var when needed.

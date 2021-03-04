@@ -1,17 +1,19 @@
+/* This file is responsible to configuring how to set up this app module */
 plugins {
+    // plugins are needed by Gradle to know how to build Android and Kotlin projects
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 30 // versions from 19 to 30
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.diceroller"
-        minSdkVersion 19
-        targetSdkVersion 30
+        applicationId "com.example.diceroller" // must be unique (1st reverse name of company or domain , 2nd name of app)
+        minSdkVersion 19 // minimum supported version
+        targetSdkVersion 30 // to use the latest feature you need to select the latest version ( version of app is tested on but don't affect the compile)
         versionCode 1
         versionName "1.0"
 
@@ -34,6 +36,9 @@ android {
 }
 
 dependencies {
+
+    /* These dependencies are all needed for our App and the Gradle will download all these depend on our behalf for the
+    *  repository we specified in the other project build.gradle file, these dependencies always need to be with the latest version */
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'
