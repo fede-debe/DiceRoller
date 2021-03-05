@@ -16,6 +16,7 @@ android {
         targetSdkVersion 30 // to use the latest feature you need to select the latest version ( version of app is tested on but don't affect the compile)
         versionCode 1
         versionName "1.0"
+        vectorDrawables.useSupportLibrary = true // avoid the creation of Png files for version below 21 API(can't use vector drawables) by using this library
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
